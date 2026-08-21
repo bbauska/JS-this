@@ -9,7 +9,7 @@ libraries may bind this differently. This lesson helps you predict and control t
 
 ### Rules
 
-<p id="rule01">1 - If the <span>new</span> keyword is used when calling the function, <span>this</span> inside the function is a brand new object created by the JavaScript engine.</p>
+<p id="rule01">1 - If the <span style="color: red;">new</span> keyword is used when calling the function, <span>this</span> inside the function is a brand new object created by the JavaScript engine.</p>
 
 ```
 function ConstructorExample() {
