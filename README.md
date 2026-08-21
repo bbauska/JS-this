@@ -5,10 +5,11 @@ Explore the five key rules that determine how this is assigned inside JavaScript
 how new, call, bind, and dot notation affect this. Learn why arrow functions use lexical this and how 
 libraries may bind this differently. This lesson helps you predict and control this in your code.
 
-this is set in several different ways inside functions. This lesson will make you a master of this.
+<span>this</span> is set in several different ways inside functions. This lesson will make you a master of <span>this</span>.
 
 ### Rules
-<h3 id="rule01">1 - If the <span>new</span> keyword is used when calling the function, <span>this</span> inside the function is a brand new object created by the JavaScript engine.</h3>
+
+<p id="rule01">1 - If the <span>new</span> keyword is used when calling the function, <span>this</span> inside the function is a brand new object created by the JavaScript engine.</p>
 
 ```
 function ConstructorExample() {
@@ -23,7 +24,7 @@ new ConstructorExample();
 // -> ConstructorExample { value: 10 }
 ```
 
-<h3 id="rule02">2 - If apply, call, or bind are used to call a function, <span>this</span> inside the function is the object that is passed in as the argument.</h3>
+<p id="rule02">2 - If apply, call, or bind are used to call a function, <span>this</span> inside the function is the object that is passed in as the argument.</p>
 
 ```
 function fn() {
@@ -41,9 +42,9 @@ fn.call(obj); // -> { value: 5 }
 fn.apply(obj); // -> { value: 5 }
 ```
 
-<h3 id="rule03">3 - If a function is called as a method — that is, if dot notation is used to invoke the function — <span>this</span> 
+<p id="rule03">3 - If a function is called as a method — that is, if dot notation is used to invoke the function — <span>this</span> 
 is the object that the function is a property of. In other words, when a dot is to the left of a function invocation, 
-<span>this</span> is the object to the left of the dot. (ƒ symbolizes function in the code blocks)</h3>
+<span>this</span> is the object to the left of the dot. (ƒ symbolizes function in the code blocks)</p>
 
 ```
 const obj = {
@@ -56,8 +57,8 @@ const obj = {
 obj.printThis(); // -> { value: 5, printThis: ƒ }
 ```
 
-<h3 id="rule04"4 - If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions 
-present above, <span>this</span> is the global object. In a browser, it’s <span>window</span>.</h3>
+<p id="rule04"4 - If a function is invoked as a free function invocation, meaning it was invoked without any of the conditions 
+present above, <span>this</span> is the global object. In a browser, it’s <span>window</span>.</p>
 
 Note that this rule is the same as rule 3 — the difference is that a function that is not declared as a method 
 automatically becomes a property of the global object, <span>window</span>. This is therefore an implicit method invocation. 
@@ -72,7 +73,7 @@ When we call <span>fn()</span>, it’s interpreted as <span>window.fn()</span>, 
 console.log(fn === window.fn); // -> true
 ```
 
-<h3 id="rule05"5 - If multiple of the above rules apply, the rule that is higher wins and will set the <span>this</span> value.</h3>
+<p id="rule05"5 - If multiple of the above rules apply, the rule that is higher wins and will set the <span>this</span> value.</p>
 
 ### Applying the Rules
 Let’s go over a code example and apply our rules. Try figuring out what <span>this</span> will be with the two 
